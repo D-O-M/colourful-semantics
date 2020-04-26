@@ -28,7 +28,6 @@ export class LessonComponent {
     }
 
     onClickBack() {
-        this.challengeService.selectedChallenge = null;
         this.router.navigate(['/']);
     }
 
