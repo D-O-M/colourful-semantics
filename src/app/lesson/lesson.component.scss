@@ -1,0 +1,153 @@
+.lesson-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "picture who doing what where";
+    grid-template-columns: 30% 17.5% 17.5% 17.5% 17.5%;
+}
+
+.section-container, .image-container {
+    max-height: 100vh;
+}
+
+.image-container {
+    position: relative;
+    background: #A685FE;
+    border-right: solid 2.5px rgba(0, 0, 0, 0.2);
+
+    .check-button,
+    .back-button {
+        background: #885AFF;
+        border-radius: 50px;
+        font-size: 24px;
+        line-height: 50px;
+        color: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+    }
+
+    .check-button {
+        display: inline-block;
+    }
+
+    .back-button {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    img {
+        min-width: 80%;
+        max-width: calc(90% - 20px);
+        border: solid 20px #885AFF;
+        cursor: pointer;
+        
+        &.position-correction {
+            margin-top: 150px;
+        }
+    }
+
+    .message {
+        display: block;
+        font-size: 30px;
+        height: 100px;
+        color: #A685FE;
+
+        &.show {
+            color: #fff;
+        }
+    }
+}
+
+.section-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40px calc(25% + 30px) calc(25% - 20px) calc(25% - 20px) calc(25% - 20px);
+    border-left: solid 2.5px rgba(0, 0, 0, 0.2);
+    border-right: solid 2.5px rgba(0, 0, 0, 0.2);
+
+    h2 {
+        font-size: 24px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.2);
+        margin: 0;
+        padding: 0;
+    }
+
+    &.who {
+        background: #FF9900;
+    }
+
+    &.doing {
+        background: #FFFF00;
+    }
+
+    &.what {
+        background: #00FF00;
+    }
+
+    &.where {
+        background: #3366FF;
+    }
+
+    .answer {
+        border-bottom: solid 40px rgba(0, 0, 0, 0.2);
+
+        img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    }
+
+    .answer-option img {
+        max-width: 50%;
+        max-height: 100%;
+    }
+
+    &:last-of-type {
+        border-right: none;
+    }
+}
+
+.alignment-outer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.alignment-inner-container {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+.check-mark,
+.cross-mark {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.check-mark {
+    background: greenyellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cross-mark {
+    background: red;
+    font-weight: normal;
+    font-size: 40px;
+}

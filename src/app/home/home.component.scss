@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(6, calc(100% / 6));
+    grid-template-rows: repeat(4, 25%);
+    background: #A685FE;
+
+    .challenge {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        outline: solid 3px #885AFF;
+        cursor: pointer;
+
+        img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .number-overlay {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: 150px;
+            color: #fff;
+            opacity: 0.6;
+        }
+    }
+}

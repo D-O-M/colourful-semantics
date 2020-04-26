@@ -1,0 +1,6 @@
+<div class="grid-container">
+    <div class="challenge" *ngFor="let challenge of challenges; let i=index" (click)="onSelectChallenge(challenge)">
+        <img src="assets/{{ challenge.image }}">
+        <div class="number-overlay">{{ i+1 }}</div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="lesson-grid">
+    <div class="image-container alignment-outer-container">
+        <div class="back-button" (click)="onClickBack()">&larr; Back</div>
+        <div class="alignment-inner-container">
+            <img [class.position-correction]="answers.who && answers.doing && answers.what && answers.where"
+                src="assets/{{ challenge.image }}">
+            <div class="check-button" *ngIf="answers.who && answers.doing && answers.what && answers.where"
+                (click)="onClickCheckAnswers()">Check Answers</div>
+            <p class="message" *ngIf="answers.who && answers.doing && answers.what && answers.where"
+                [class.show]="markAnswers && answers.who?.correct && answers.doing?.correct && answers.what?.correct && answers.where?.correct">
+                Well done! Now say it out loud!
+            </p> 
+        </div>
+    </div>
+    <div class="section-container who">
+        <h2>Who</h2>
+        <div class="answer alignment-outer-container">
+            <div class="alignment-inner-container">
+                <img *ngIf="answers.who" src="assets/{{ answers.who.image }}" title="{{ answers.who.label }}">
+            </div>
+            <ng-container *ngIf="markAnswers">
+                <div *ngIf="answers.who.correct; else incorrect" class="check-mark">✓</div>
+                <ng-template #incorrect>
+                    <div class="cross-mark">×</div>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div class="options-container alignment-outer-container" *ngFor="let option of challenge.sections.who.options">
+            <div class="answer-option alignment-inner-container" (click)="selectAnswer('who', option)">
+                <img src="assets/{{ option.image }}" title="{{ option.label }}">
+            </div>
+        </div>
+    </div>
+    <div class="section-container doing">
+        <h2>What Doing</h2>
+        <div class="answer alignment-outer-container">
+            <div class="alignment-inner-container">
+                <img *ngIf="answers.doing" src="assets/{{ answers.doing.image }}" title="{{ answers.doing.label }}">
+            </div>
+            <ng-container *ngIf="markAnswers">
+                <div *ngIf="answers.doing.correct; else incorrect" class="check-mark">✓</div>
+                <ng-template #incorrect>
+                    <div class="cross-mark">×</div>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div class="options-container alignment-outer-container" *ngFor="let option of challenge.sections.doing.options">
+            <div class="answer-option alignment-inner-container" (click)="selectAnswer('doing', option)">
+                <img src="assets/{{ option.image }}" title="{{ option.label }}">
+            </div>
+        </div>
+    </div>
+    <div class="section-container what">
+        <h2>What</h2>
+        <div class="answer alignment-outer-container">
+            <div class="alignment-inner-container">
+                <img *ngIf="answers.what" src="assets/{{ answers.what.image }}" title="{{ answers.what.label }}">
+            </div>
+            <ng-container *ngIf="markAnswers">
+                <div *ngIf="answers.what.correct; else incorrect" class="check-mark">✓</div>
+                <ng-template #incorrect>
+                    <div class="cross-mark">×</div>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div class="options-container alignment-outer-container" *ngFor="let option of challenge.sections.what.options">
+            <div class="answer-option alignment-inner-container" (click)="selectAnswer('what', option)">
+                <img src="assets/{{ option.image }}" title="{{ option.label }}">
+            </div>
+        </div>
+    </div>
+    <div class="section-container where">
+        <h2>Where</h2>
+        <div class="answer alignment-outer-container">
+            <div class="alignment-inner-container">
+                <img *ngIf="answers.where" src="assets/{{ answers.where.image }}" title="{{ answers.where.label }}">
+            </div>
+            <ng-container *ngIf="markAnswers">
+                <div *ngIf="answers.where.correct; else incorrect" class="check-mark">✓</div>
+                <ng-template #incorrect>
+                    <div class="cross-mark">×</div>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div class="options-container alignment-outer-container" *ngFor="let option of challenge.sections.where.options">
+            <div class="answer-option alignment-inner-container" (click)="selectAnswer('where', option)">
+                <img src="assets/{{ option.image }}" title="{{ option.label }}">
+            </div>
+        </div>
+    </div>
+</div>

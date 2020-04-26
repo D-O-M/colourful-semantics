@@ -1,0 +1,81 @@
+{
+    "image": "image-file.jpg",
+    "sections": {
+        "who": {
+            "options": [
+                {
+                    "label": "Option 1 Label",
+                    "image": "option-1.png",
+                    "correct": true
+                },
+                {
+                    "label": "Option 2 Label",
+                    "image": "option-2.png",
+                    "correct": false
+                },
+                {
+                    "label": "Option 3 Label",
+                    "image": "option-3.png",
+                    "correct": false
+                }
+            ]
+        },
+        "doing": {
+            "options": [
+                {
+                    "label": "Option 1 Label",
+                    "image": "option-1.png",
+                    "correct": true
+                },
+                {
+                    "label": "Option 2 Label",
+                    "image": "option-2.png",
+                    "correct": false
+                },
+                {
+                    "label": "Option 3 Label",
+                    "image": "option-3.png",
+                    "correct": false
+                }
+            ]
+        },
+        "what": {
+            "options": [
+                {
+                    "label": "Option 1 Label",
+                    "image": "option-1.png",
+                    "correct": true
+                },
+                {
+                    "label": "Option 2 Label",
+                    "image": "option-2.png",
+                    "correct": false
+                },
+                {
+                    "label": "Option 3 Label",
+                    "image": "option-3.png",
+                    "correct": false
+                }
+            ]
+        },
+        "where": {
+            "options": [
+                {
+                    "label": "Option 1 Label",
+                    "image": "option-1.png",
+                    "correct": true
+                },
+                {
+                    "label": "Option 2 Label",
+                    "image": "option-2.png",
+                    "correct": false
+                },
+                {
+                    "label": "Option 3 Label",
+                    "image": "option-3.png",
+                    "correct": false
+                }
+            ]
+        }
+    }
+}
