@@ -89,12 +89,12 @@
                         {
                             "label": "baby",
                             "image": "o-baby.png",
-                            "correct": true
+                            "correct": false
                         },
                         {
                             "label": "Boy",
                             "image": "o-boy.png",
-                            "correct": false
+                            "correct": true
                         },
                         {
                             "label": "man",
@@ -984,7 +984,7 @@
                         },
                         {
                             "label": "boy",
-                            "image": "boy-looking-sofa.jpg",
+                            "image": "o-boy.png",
                             "correct": true
                         },
                         {
@@ -998,7 +998,7 @@
                     "options": [
                         {
                             "label": "looking",
-                            "image": "looking.jpg",
+                            "image": "y-looking.jpg",
                             "correct": true
                         },
                         {
@@ -1065,7 +1065,7 @@
                         },
                         {
                             "label": "boy",
-                            "image": "boy-looking-sofa.jpg",
+                            "image": "o-boy.png",
                             "correct": false
                         },
                         {
@@ -1216,13 +1216,13 @@
             }
         },
         {
-            "image": "man-swimming.jpg",
+            "image": "man-kicking.jpg",
             "sections": {
                 "who": {
                     "options": [
                         {
-                            "label": "man",
-                            "image": "o-man.png",
+                            "label": "lady",
+                            "image": "o-lady.png",
                             "correct": true
                         },
                         {
